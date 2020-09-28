@@ -29,14 +29,15 @@ $mobile-navbar-height: 20em;
 
 // Typography
 @import url('https://fonts.googleapis.com/css?family=Lora|Open+Sans');
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap');
 @mixin header(){
     padding-top: 1em;
     font-family: $header-font;
     line-height: 1.5em;
 }
-$main-font: 'Open Sans';
-$ingress-font: 'Open Sans'; 
-$header-font: 'Open Sans';
+$main-font: 'Barlow', sans-serif;
+$ingress-font: 'Barlow', sans-serif; 
+$header-font: 'Barlow', sans-serif;
 $text-font: "Lora";
 
 $text-size-mobile: 17px;

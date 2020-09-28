@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css?family=Lora|Open+Sans");
+/**
+ * ReSass.
+ *
+ * MIXIN: Responsive Media Queries.
+ *
+ * Creates responsive media queries for seven different screen sizes.
+ * These are based on min-width which means if x is the size then your
+ * CSS will affect any device with screen width x and above.
+ *
+ * USAGE:
+ *	@include r(240)  { }
+ *	@include r(320)  { }
+ *	@include r(480)  { }
+ *	@include r(768)  { }
+ *	@include r(1024) { }
+ *	@include r(1140) { }
+ *	@include r(1280) { }
+ *  @include r(1500) { }
+ *
+ * CSS content goes inside {} brackets. These mixins should be used inside
+ * a class definition. For example:
+ *
+ * The following CSS will hide the .header on screen width 320px and above.
+ * .header {
+ * 	  @include r(320)  { display: none; }
+ * }
+ *
+ * @author  Ahmad Awais (https://github.com/ahmadawais)
+ * @link    https://github.com/ahmadawais/ReSass.git
+ * @version 1.0.0
+ */
+#footer-lund {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 18rem;
+  background-color: #333333;
+}
+
+div#sponsors {
+  max-width: 900px;
+  margin: auto;
+  padding: 2em;
+  position: relative;
+}
+
+div#sponsors img.sponsor {
+  float: top;
+  margin-left: 7%;
+  margin-bottom: 1em;
+  max-width: 10%;
+  min-width: 7%;
+}
+
+div#sponsors img#bakertilly {
+  padding-top: 10%;
+  max-width: 15%;
+  float: top;
+}
+
+div#sponsors div#social {
+  margin-top: 4em;
+  margin-left: auto;
+  margin-right: auto;
+  float: right;
+  width: auto;
+  height: auto;
+  margin-top: 0px;
+}
+
+div#sponsors div#social ul {
+  list-style: none;
+  color: #FFFF;
+}
+
+div#sponsors div#social ul a {
+  color: #FFFF;
+  padding: 0;
+}
+
+div#sponsors div#social img {
+  width: 1em;
+  height: 1em;
+  margin-right: 1em;
+  margin-bottom: 0;
+}
+/*# sourceMappingURL=footer.css.map */

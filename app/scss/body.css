@@ -1,0 +1,291 @@
+@import url("https://fonts.googleapis.com/css?family=Lora|Open+Sans");
+/**
+ * ReSass.
+ *
+ * MIXIN: Responsive Media Queries.
+ *
+ * Creates responsive media queries for seven different screen sizes.
+ * These are based on min-width which means if x is the size then your
+ * CSS will affect any device with screen width x and above.
+ *
+ * USAGE:
+ *	@include r(240)  { }
+ *	@include r(320)  { }
+ *	@include r(480)  { }
+ *	@include r(768)  { }
+ *	@include r(1024) { }
+ *	@include r(1140) { }
+ *	@include r(1280) { }
+ *  @include r(1500) { }
+ *
+ * CSS content goes inside {} brackets. These mixins should be used inside
+ * a class definition. For example:
+ *
+ * The following CSS will hide the .header on screen width 320px and above.
+ * .header {
+ * 	  @include r(320)  { display: none; }
+ * }
+ *
+ * @author  Ahmad Awais (https://github.com/ahmadawais)
+ * @link    https://github.com/ahmadawais/ReSass.git
+ * @version 1.0.0
+ */
+h1#title {
+  margin-top: 1em;
+  margin-bottom: 1em;
+  font-family: "Open Sans";
+  text-align: center;
+  font-size: 50px;
+  line-height: normal;
+}
+
+@media (min-width: 480px) {
+  h1#title {
+    margin-top: 0em;
+  }
+}
+
+@media (min-width: 768px) {
+  h1#title {
+    margin-top: 3em;
+  }
+}
+
+#body {
+  padding: 4px;
+  padding-bottom: 2.5rem;
+}
+
+#body h1 {
+  padding-top: 1em;
+  font-family: "Open Sans";
+  line-height: 1.5em;
+  font-size: 32px;
+}
+
+#body h2 {
+  padding-top: 1em;
+  font-family: "Open Sans";
+  line-height: 1.5em;
+  font-size: 32px;
+}
+
+#body h3 {
+  padding-top: 1em;
+  font-family: "Open Sans";
+  line-height: 1.5em;
+  font-size: 22px;
+}
+
+#body h4 {
+  padding-top: 1em;
+  font-family: "Open Sans";
+  line-height: 1.5em;
+  font-size: 20px;
+}
+
+#body p {
+  font-size: 17px;
+  text-align: left;
+  line-height: 30px;
+  font-weight: 400;
+  line-height: 1.58;
+  letter-spacing: -0.003em;
+  font-family: "Lora", Georgia, Cambria, "Times New Roman";
+  color: #333333;
+}
+
+@media (min-width: 480px) {
+  #body p {
+    font-size: 20px;
+  }
+}
+
+#body p.ingress {
+  font-family: "Open Sans";
+  color: #727272;
+}
+
+#body p.big-cite {
+  font-family: "Open Sans";
+  font-size: 21px;
+  position: center;
+  color: #727272;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+#body p.fig {
+  font-size: 16px;
+  padding-left: 10%;
+  padding-right: 10%;
+  line-height: 20px;
+  color: #727272;
+  font-family: "Open Sans";
+}
+
+#body p.byline {
+  margin-bottom: 2em;
+  font-family: "Open Sans";
+  font-size: 21px;
+  text-align: right;
+  color: #727272;
+}
+
+#body p.byline {
+  font-family: "Open Sans";
+  text-align: right;
+  color: #727272;
+}
+
+#body h4.references {
+  padding-top: 3em;
+}
+
+#body ul, #body ol {
+  margin-left: 4em;
+  font-size: 17px;
+  text-align: left;
+  line-height: 30px;
+  font-weight: 400;
+  line-height: 1.58;
+  letter-spacing: -0.003em;
+  font-family: "Lora", Georgia, Cambria, "Times New Roman";
+  color: #333333;
+  padding-bottom: 0.5em;
+}
+
+@media (min-width: 480px) {
+  #body ul, #body ol {
+    font-size: 20px;
+  }
+}
+
+#body ul.references {
+  word-wrap: break-word;
+  margin-left: 1em;
+  color: #727272;
+  font-family: "Open Sans";
+  list-style-type: none;
+}
+
+#body ul.references li {
+  padding-bottom: 1em;
+}
+
+#body p.date {
+  font-family: "Open Sans";
+  font-size: 18px;
+  color: #727272;
+  padding-bottom: 0.5em;
+  position: relative;
+  top: 50px;
+}
+
+#body p.math {
+  font-size: 12px;
+}
+
+@media (min-width: 480px) {
+  #body p.math {
+    font-size: 16px;
+  }
+}
+
+#body h5.fig {
+  text-align: center;
+  text-font: "Open Sans";
+  font-size: 16px;
+  line-height: 1.2;
+}
+
+#body img.fig {
+  width: 100%;
+}
+
+#body video.fig-small {
+  float: top;
+  width: 70%;
+  margin-left: 15%;
+  margin-right: 15%;
+}
+
+#body img.fig-small {
+  float: top;
+  width: 70%;
+  margin-left: 15%;
+  margin-right: 15%;
+}
+
+#body video.fig {
+  width: 100%;
+}
+
+#body table {
+  border-collapse: collapse;
+  font-size: 12px;
+  text-align: left;
+  line-height: 30px;
+  font-weight: 400;
+  line-height: 1.58;
+  letter-spacing: -0.003em;
+  color: #333333;
+  padding-bottom: 0.5em;
+  width: 100%;
+  text-align: left;
+}
+
+@media (min-width: 480px) {
+  #body table {
+    font-size: 14px;
+  }
+}
+
+#body table th, #body table td {
+  padding: 1%;
+  padding-right: 2em;
+  text-align: left;
+  border: 1px solid #727272;
+}
+
+#body table th {
+  font-family: "Open Sans";
+}
+
+#body table td {
+  font-family: "Lora", Georgia, Cambria, "Times New Roman";
+}
+
+#body img#SynthEthics {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Style the button that is used to open and close the collapsible content */
+.collapsible {
+  background-color: #333333;
+  color: #FFFF;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  font-family: "Open Sans";
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.collapsible:hover {
+  background-color: #727272;
+  color: #333333;
+}
+
+/* Style the collapsible content. Note: hidden by default */
+.collapsible-content {
+  display: none;
+  overflow: hidden;
+  background-color: #f1f1f1;
+}
+/*# sourceMappingURL=body.css.map */

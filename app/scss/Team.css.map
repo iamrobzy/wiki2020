@@ -1,0 +1,11 @@
+{
+    "version": 3,
+    "mappings": "AC8BA,OAAO,CAAC,6DAAI;AC9BZ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;GA8BG;AF3BH,AAAA,OAAO,CAAA;EACH,YAAY,EAAE,GAAG;EACjB,WAAW,EAAE,GAAG;EAChB,KAAK,EAAE,GAAG;CACb",
+    "sources": [
+        "Team.scss",
+        "constants.scss",
+        "libraries/resass.scss"
+    ],
+    "names": [],
+    "file": "Team.css"
+}

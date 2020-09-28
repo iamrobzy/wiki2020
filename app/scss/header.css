@@ -1,0 +1,240 @@
+@import url("https://fonts.googleapis.com/css?family=Lora|Open+Sans");
+/**
+ * ReSass.
+ *
+ * MIXIN: Responsive Media Queries.
+ *
+ * Creates responsive media queries for seven different screen sizes.
+ * These are based on min-width which means if x is the size then your
+ * CSS will affect any device with screen width x and above.
+ *
+ * USAGE:
+ *	@include r(240)  { }
+ *	@include r(320)  { }
+ *	@include r(480)  { }
+ *	@include r(768)  { }
+ *	@include r(1024) { }
+ *	@include r(1140) { }
+ *	@include r(1280) { }
+ *  @include r(1500) { }
+ *
+ * CSS content goes inside {} brackets. These mixins should be used inside
+ * a class definition. For example:
+ *
+ * The following CSS will hide the .header on screen width 320px and above.
+ * .header {
+ * 	  @include r(320)  { display: none; }
+ * }
+ *
+ * @author  Ahmad Awais (https://github.com/ahmadawais)
+ * @link    https://github.com/ahmadawais/ReSass.git
+ * @version 1.0.0
+ */
+#delay {
+  opacity: 0;
+  -webkit-animation: fadein 5.5s;
+  /* Safari, Chrome and Opera > 12.1 */
+  /* Firefox < 16 */
+  /* Internet Explorer */
+  animation: fadein 2.5s;
+  -webkit-animation-delay: 5.5s;
+          animation-delay: 5.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.title-container {
+  padding: 1px;
+  margin-top: 2em;
+  margin-bottom: 1em;
+}
+
+@media (min-width: 480px) {
+  .title-container {
+    margin-top: 0;
+  }
+}
+
+.title-container img, .title-container video {
+  width: 100%;
+  margin-top: 1em;
+}
+
+@media (min-width: 768px) {
+  .title-container img, .title-container video {
+    margin-top: 6em;
+  }
+}
+
+.title-container img.subtitle {
+  opacity: 0;
+  -webkit-animation: fadein 5.5s;
+  /* Safari, Chrome and Opera > 12.1 */
+  /* Firefox < 16 */
+  /* Internet Explorer */
+  animation: fadein 2.5s;
+  -webkit-animation-delay: 5.5s;
+          animation-delay: 5.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  margin-top: 1em;
+  position: relative;
+  left: 5%;
+  right: 5%;
+  width: 90%;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media (min-width: 768px) {
+  .title-container {
+    height: 18rem;
+  }
+}
+
+.logo-container {
+  height: 18rem;
+  position: relative;
+}
+
+.logo {
+  opacity: 0;
+  -webkit-animation: fadein 0s;
+  /* Safari, Chrome and Opera > 12.1 */
+  /* Firefox < 16 */
+  /* Internet Explorer */
+  animation: fadein 2.5s;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  width: 75%;
+  margin-left: 1em;
+  margin-right: 1em;
+  margin-top: 6.5em;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+#right-col {
+  width: 30%;
+  margin: auto;
+  display: none;
+  padding-bottom: 2em;
+}
+
+@media (min-width: 480px) {
+  #right-col {
+    display: block;
+  }
+}
+
+@media (min-width: 768px) {
+  #right-col {
+    display: none;
+  }
+}
+
+#left-col {
+  height: 18rem;
+  position: relative;
+  display: none;
+}
+
+@media (min-width: 768px) {
+  #left-col {
+    display: block;
+  }
+}
+
+.sticky {
+  opacity: 0;
+  -webkit-animation: fadein 0s;
+  /* Safari, Chrome and Opera > 12.1 */
+  /* Firefox < 16 */
+  /* Internet Explorer */
+  animation: fadein 1s;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  font-size: 15px;
+  position: absolute;
+  padding-left: 15px;
+  max-width: 14em;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.sticky .is-active-link::before {
+  background: #333333;
+}
+
+.sticky ul, .sticky ol.is-collapsible {
+  padding: 0;
+  margin-left: 10px;
+}
+
+.sticky li {
+  margin: 0 0 1em 0;
+}
+
+.sticky ul, .sticky ol {
+  font-size: inherit;
+  padding: 0.2em;
+  margin-left: 10px;
+}
+
+.sticky a {
+  text-decoration: none;
+  color: black;
+}
+
+.sticky a:visited {
+  color: black;
+}
+
+.fixed {
+  position: fixed;
+  top: 62px;
+}
+/*# sourceMappingURL=header.css.map */

@@ -1,0 +1,179 @@
+@import url("https://fonts.googleapis.com/css?family=Lora|Open+Sans");
+/**
+ * ReSass.
+ *
+ * MIXIN: Responsive Media Queries.
+ *
+ * Creates responsive media queries for seven different screen sizes.
+ * These are based on min-width which means if x is the size then your
+ * CSS will affect any device with screen width x and above.
+ *
+ * USAGE:
+ *	@include r(240)  { }
+ *	@include r(320)  { }
+ *	@include r(480)  { }
+ *	@include r(768)  { }
+ *	@include r(1024) { }
+ *	@include r(1140) { }
+ *	@include r(1280) { }
+ *  @include r(1500) { }
+ *
+ * CSS content goes inside {} brackets. These mixins should be used inside
+ * a class definition. For example:
+ *
+ * The following CSS will hide the .header on screen width 320px and above.
+ * .header {
+ * 	  @include r(320)  { display: none; }
+ * }
+ *
+ * @author  Ahmad Awais (https://github.com/ahmadawais)
+ * @link    https://github.com/ahmadawais/ReSass.git
+ * @version 1.0.0
+ */
+ul.row {
+  font-size: 22px;
+  text-align: left;
+  display: block;
+  list-style: none;
+  margin: 0 2px;
+  padding: 0;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+@media (min-width: 480px) {
+  ul.row {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 768px) {
+  ul.row {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 480px) {
+  ul.row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  ul.row li.dropdown-content {
+    text-align: left;
+  }
+}
+
+.dropdown {
+  width: 100%;
+  position: relative;
+  padding: 0;
+}
+
+.dropdown:hover {
+  font-weight: bold;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+  font-weight: normal;
+}
+
+.dropdown a {
+  white-space: nowrap;
+  text-decoration: none;
+  color: #FFFF;
+}
+
+.dropdown a:visited {
+  color: #FFFF;
+}
+
+.dropdown a:hover {
+  color: #727272;
+}
+
+.dropdown-content {
+  width: 6em;
+  min-width: 6em;
+  left: 40px;
+  background-color: #333333;
+  position: relative;
+}
+
+@media (min-width: 480px) {
+  .dropdown-content {
+    display: none;
+    min-width: 10em;
+    position: absolute;
+    z-index: 1;
+    text-align: left;
+    width: 100%;
+    left: -20px;
+  }
+}
+
+.dropdown-content ul {
+  list-style: none;
+  margin: 10px;
+}
+
+.dropdown-content li {
+  overflow: visible;
+}
+
+.navbar-background {
+  overflow: scroll;
+  min-height: 60px;
+  position: fixed;
+  top: 0px;
+  z-index: 999;
+  background-color: #333333;
+  width: 100%;
+}
+
+@media (min-width: 480px) {
+  .navbar-background {
+    overflow: visible;
+  }
+}
+
+#navbar {
+  display: none;
+  left: 0;
+  top: 22px;
+  height: 100vh;
+  position: relative;
+  margin: auto;
+  z-index: 9999;
+  max-width: 900px;
+  font-color: #333333;
+}
+
+@media (min-width: 480px) {
+  #navbar {
+    display: block;
+    left: 1em;
+    top: 26px;
+    height: 100%;
+  }
+}
+
+.hamburger {
+  z-index: 999;
+  content: "";
+  position: fixed;
+  top: 24px;
+  right: 14px;
+  width: 24px;
+  height: 21px;
+  border-top: 12px double #FFFF;
+  border-bottom: 4px solid #FFFF;
+}
+
+@media (min-width: 480px) {
+  .hamburger {
+    display: none;
+  }
+}
+/*# sourceMappingURL=navbar.css.map */

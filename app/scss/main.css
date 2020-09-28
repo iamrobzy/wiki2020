@@ -1,0 +1,1113 @@
+/* Core Styles */
+@import url(c:\Users\Robert Skoglund\Documents\GitHub\wiki2019\app\scss\libraries\katex.css);
+@import url("https://fonts.googleapis.com/css?family=Lora|Open+Sans");
+@import url("https://fonts.googleapis.com/css?family=Lora|Open+Sans");
+@import url("https://fonts.googleapis.com/css?family=Lora|Open+Sans");
+@import url("https://fonts.googleapis.com/css?family=Lora|Open+Sans");
+@import url("https://fonts.googleapis.com/css?family=Lora|Open+Sans");
+@import url("https://fonts.googleapis.com/css?family=Lora|Open+Sans");
+@import url("https://fonts.googleapis.com/css?family=Lora|Open+Sans");
+.toc {
+  overflow-y: auto;
+}
+
+.toc > .toc-list {
+  overflow: hidden;
+  position: relative;
+}
+
+.toc > .toc-list li {
+  list-style: none;
+}
+
+.toc-list {
+  margin: 0;
+  padding-left: 10px;
+}
+
+a.toc-link {
+  color: currentColor;
+  height: 100%;
+}
+
+.is-collapsible {
+  max-height: 1000px;
+  overflow: hidden;
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+}
+
+.is-collapsed {
+  max-height: 0;
+}
+
+.is-position-fixed {
+  position: fixed !important;
+  top: 0;
+}
+
+.is-active-link {
+  font-weight: 700;
+}
+
+/* Default Theme Styles */
+.toc-link::before {
+  background-color: #EEE;
+  content: ' ';
+  display: inline-block;
+  height: inherit;
+  left: 0;
+  margin-top: -1px;
+  position: absolute;
+  width: 2px;
+}
+
+.is-active-link::before {
+  background-color: #54BC4B;
+}
+
+/**
+ * ReSass.
+ *
+ * MIXIN: Responsive Media Queries.
+ *
+ * Creates responsive media queries for seven different screen sizes.
+ * These are based on min-width which means if x is the size then your
+ * CSS will affect any device with screen width x and above.
+ *
+ * USAGE:
+ *	@include r(240)  { }
+ *	@include r(320)  { }
+ *	@include r(480)  { }
+ *	@include r(768)  { }
+ *	@include r(1024) { }
+ *	@include r(1140) { }
+ *	@include r(1280) { }
+ *  @include r(1500) { }
+ *
+ * CSS content goes inside {} brackets. These mixins should be used inside
+ * a class definition. For example:
+ *
+ * The following CSS will hide the .header on screen width 320px and above.
+ * .header {
+ * 	  @include r(320)  { display: none; }
+ * }
+ *
+ * @author  Ahmad Awais (https://github.com/ahmadawais)
+ * @link    https://github.com/ahmadawais/ReSass.git
+ * @version 1.0.0
+ */
+h1#title {
+  margin-top: 1em;
+  margin-bottom: 1em;
+  font-family: "Open Sans";
+  text-align: center;
+  font-size: 50px;
+  line-height: normal;
+}
+
+@media (min-width: 480px) {
+  h1#title {
+    margin-top: 0em;
+  }
+}
+
+@media (min-width: 768px) {
+  h1#title {
+    margin-top: 3em;
+  }
+}
+
+#body {
+  padding: 4px;
+  padding-bottom: 2.5rem;
+}
+
+#body h1 {
+  padding-top: 1em;
+  font-family: "Open Sans";
+  line-height: 1.5em;
+  font-size: 32px;
+}
+
+#body h2 {
+  padding-top: 1em;
+  font-family: "Open Sans";
+  line-height: 1.5em;
+  font-size: 32px;
+}
+
+#body h3 {
+  padding-top: 1em;
+  font-family: "Open Sans";
+  line-height: 1.5em;
+  font-size: 22px;
+}
+
+#body h4 {
+  padding-top: 1em;
+  font-family: "Open Sans";
+  line-height: 1.5em;
+  font-size: 20px;
+}
+
+#body p {
+  font-size: 17px;
+  text-align: left;
+  line-height: 30px;
+  font-weight: 400;
+  line-height: 1.58;
+  letter-spacing: -0.003em;
+  font-family: "Lora", Georgia, Cambria, "Times New Roman";
+  color: #333333;
+}
+
+@media (min-width: 480px) {
+  #body p {
+    font-size: 20px;
+  }
+}
+
+#body p.ingress {
+  font-family: "Open Sans";
+  color: #727272;
+}
+
+#body p.big-cite {
+  font-family: "Open Sans";
+  font-size: 21px;
+  position: center;
+  color: #727272;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+#body p.fig {
+  font-size: 16px;
+  padding-left: 10%;
+  padding-right: 10%;
+  line-height: 20px;
+  color: #727272;
+  font-family: "Open Sans";
+}
+
+#body p.byline {
+  margin-bottom: 2em;
+  font-family: "Open Sans";
+  font-size: 21px;
+  text-align: right;
+  color: #727272;
+}
+
+#body p.byline {
+  font-family: "Open Sans";
+  text-align: right;
+  color: #727272;
+}
+
+#body h4.references {
+  padding-top: 3em;
+}
+
+#body ul, #body ol {
+  margin-left: 4em;
+  font-size: 17px;
+  text-align: left;
+  line-height: 30px;
+  font-weight: 400;
+  line-height: 1.58;
+  letter-spacing: -0.003em;
+  font-family: "Lora", Georgia, Cambria, "Times New Roman";
+  color: #333333;
+  padding-bottom: 0.5em;
+}
+
+@media (min-width: 480px) {
+  #body ul, #body ol {
+    font-size: 20px;
+  }
+}
+
+#body ul.references {
+  word-wrap: break-word;
+  margin-left: 1em;
+  color: #727272;
+  font-family: "Open Sans";
+  list-style-type: none;
+}
+
+#body ul.references li {
+  padding-bottom: 1em;
+}
+
+#body p.date {
+  font-family: "Open Sans";
+  font-size: 18px;
+  color: #727272;
+  padding-bottom: 0.5em;
+  position: relative;
+  top: 50px;
+}
+
+#body p.math {
+  font-size: 12px;
+}
+
+@media (min-width: 480px) {
+  #body p.math {
+    font-size: 16px;
+  }
+}
+
+#body h5.fig {
+  text-align: center;
+  text-font: "Open Sans";
+  font-size: 16px;
+  line-height: 1.2;
+}
+
+#body img.fig {
+  width: 100%;
+}
+
+#body video.fig-small {
+  float: top;
+  width: 70%;
+  margin-left: 15%;
+  margin-right: 15%;
+}
+
+#body img.fig-small {
+  float: top;
+  width: 70%;
+  margin-left: 15%;
+  margin-right: 15%;
+}
+
+#body video.fig {
+  width: 100%;
+}
+
+#body table {
+  border-collapse: collapse;
+  font-size: 12px;
+  text-align: left;
+  line-height: 30px;
+  font-weight: 400;
+  line-height: 1.58;
+  letter-spacing: -0.003em;
+  color: #333333;
+  padding-bottom: 0.5em;
+  width: 100%;
+  text-align: left;
+}
+
+@media (min-width: 480px) {
+  #body table {
+    font-size: 14px;
+  }
+}
+
+#body table th, #body table td {
+  padding: 1%;
+  padding-right: 2em;
+  text-align: left;
+  border: 1px solid #727272;
+}
+
+#body table th {
+  font-family: "Open Sans";
+}
+
+#body table td {
+  font-family: "Lora", Georgia, Cambria, "Times New Roman";
+}
+
+#body img#SynthEthics {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Style the button that is used to open and close the collapsible content */
+.collapsible {
+  background-color: #333333;
+  color: #FFFF;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  font-family: "Open Sans";
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.collapsible:hover {
+  background-color: #727272;
+  color: #333333;
+}
+
+/* Style the collapsible content. Note: hidden by default */
+.collapsible-content {
+  display: none;
+  overflow: hidden;
+  background-color: #f1f1f1;
+}
+
+/**
+ * ReSass.
+ *
+ * MIXIN: Responsive Media Queries.
+ *
+ * Creates responsive media queries for seven different screen sizes.
+ * These are based on min-width which means if x is the size then your
+ * CSS will affect any device with screen width x and above.
+ *
+ * USAGE:
+ *	@include r(240)  { }
+ *	@include r(320)  { }
+ *	@include r(480)  { }
+ *	@include r(768)  { }
+ *	@include r(1024) { }
+ *	@include r(1140) { }
+ *	@include r(1280) { }
+ *  @include r(1500) { }
+ *
+ * CSS content goes inside {} brackets. These mixins should be used inside
+ * a class definition. For example:
+ *
+ * The following CSS will hide the .header on screen width 320px and above.
+ * .header {
+ * 	  @include r(320)  { display: none; }
+ * }
+ *
+ * @author  Ahmad Awais (https://github.com/ahmadawais)
+ * @link    https://github.com/ahmadawais/ReSass.git
+ * @version 1.0.0
+ */
+#delay {
+  opacity: 0;
+  -webkit-animation: fadein 5.5s;
+  /* Safari, Chrome and Opera > 12.1 */
+  /* Firefox < 16 */
+  /* Internet Explorer */
+  animation: fadein 2.5s;
+  -webkit-animation-delay: 5.5s;
+          animation-delay: 5.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.title-container {
+  padding: 1px;
+  margin-top: 2em;
+  margin-bottom: 1em;
+}
+
+@media (min-width: 480px) {
+  .title-container {
+    margin-top: 0;
+  }
+}
+
+.title-container img, .title-container video {
+  width: 100%;
+  margin-top: 1em;
+}
+
+@media (min-width: 768px) {
+  .title-container img, .title-container video {
+    margin-top: 6em;
+  }
+}
+
+.title-container img.subtitle {
+  opacity: 0;
+  -webkit-animation: fadein 5.5s;
+  /* Safari, Chrome and Opera > 12.1 */
+  /* Firefox < 16 */
+  /* Internet Explorer */
+  animation: fadein 2.5s;
+  -webkit-animation-delay: 5.5s;
+          animation-delay: 5.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  margin-top: 1em;
+  position: relative;
+  left: 5%;
+  right: 5%;
+  width: 90%;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media (min-width: 768px) {
+  .title-container {
+    height: 18rem;
+  }
+}
+
+.logo-container {
+  height: 18rem;
+  position: relative;
+}
+
+.logo {
+  opacity: 0;
+  -webkit-animation: fadein 0s;
+  /* Safari, Chrome and Opera > 12.1 */
+  /* Firefox < 16 */
+  /* Internet Explorer */
+  animation: fadein 2.5s;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  width: 75%;
+  margin-left: 1em;
+  margin-right: 1em;
+  margin-top: 6.5em;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+#right-col {
+  width: 30%;
+  margin: auto;
+  display: none;
+  padding-bottom: 2em;
+}
+
+@media (min-width: 480px) {
+  #right-col {
+    display: block;
+  }
+}
+
+@media (min-width: 768px) {
+  #right-col {
+    display: none;
+  }
+}
+
+#left-col {
+  height: 18rem;
+  position: relative;
+  display: none;
+}
+
+@media (min-width: 768px) {
+  #left-col {
+    display: block;
+  }
+}
+
+.sticky {
+  opacity: 0;
+  -webkit-animation: fadein 0s;
+  /* Safari, Chrome and Opera > 12.1 */
+  /* Firefox < 16 */
+  /* Internet Explorer */
+  animation: fadein 1s;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  font-size: 15px;
+  position: absolute;
+  padding-left: 15px;
+  max-width: 14em;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.sticky .is-active-link::before {
+  background: #333333;
+}
+
+.sticky ul, .sticky ol.is-collapsible {
+  padding: 0;
+  margin-left: 10px;
+}
+
+.sticky li {
+  margin: 0 0 1em 0;
+}
+
+.sticky ul, .sticky ol {
+  font-size: inherit;
+  padding: 0.2em;
+  margin-left: 10px;
+}
+
+.sticky a {
+  text-decoration: none;
+  color: black;
+}
+
+.sticky a:visited {
+  color: black;
+}
+
+.fixed {
+  position: fixed;
+  top: 62px;
+}
+
+/**
+ * ReSass.
+ *
+ * MIXIN: Responsive Media Queries.
+ *
+ * Creates responsive media queries for seven different screen sizes.
+ * These are based on min-width which means if x is the size then your
+ * CSS will affect any device with screen width x and above.
+ *
+ * USAGE:
+ *	@include r(240)  { }
+ *	@include r(320)  { }
+ *	@include r(480)  { }
+ *	@include r(768)  { }
+ *	@include r(1024) { }
+ *	@include r(1140) { }
+ *	@include r(1280) { }
+ *  @include r(1500) { }
+ *
+ * CSS content goes inside {} brackets. These mixins should be used inside
+ * a class definition. For example:
+ *
+ * The following CSS will hide the .header on screen width 320px and above.
+ * .header {
+ * 	  @include r(320)  { display: none; }
+ * }
+ *
+ * @author  Ahmad Awais (https://github.com/ahmadawais)
+ * @link    https://github.com/ahmadawais/ReSass.git
+ * @version 1.0.0
+ */
+ul.row {
+  font-size: 22px;
+  text-align: left;
+  display: block;
+  list-style: none;
+  margin: 0 2px;
+  padding: 0;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+@media (min-width: 480px) {
+  ul.row {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 768px) {
+  ul.row {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 480px) {
+  ul.row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  ul.row li.dropdown-content {
+    text-align: left;
+  }
+}
+
+.dropdown {
+  width: 100%;
+  position: relative;
+  padding: 0;
+}
+
+.dropdown:hover {
+  font-weight: bold;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+  font-weight: normal;
+}
+
+.dropdown a {
+  white-space: nowrap;
+  text-decoration: none;
+  color: #FFFF;
+}
+
+.dropdown a:visited {
+  color: #FFFF;
+}
+
+.dropdown a:hover {
+  color: #727272;
+}
+
+.dropdown-content {
+  width: 6em;
+  min-width: 6em;
+  left: 40px;
+  background-color: #333333;
+  position: relative;
+}
+
+@media (min-width: 480px) {
+  .dropdown-content {
+    display: none;
+    min-width: 10em;
+    position: absolute;
+    z-index: 1;
+    text-align: left;
+    width: 100%;
+    left: -20px;
+  }
+}
+
+.dropdown-content ul {
+  list-style: none;
+  margin: 10px;
+}
+
+.dropdown-content li {
+  overflow: visible;
+}
+
+.navbar-background {
+  overflow: scroll;
+  min-height: 60px;
+  position: fixed;
+  top: 0px;
+  z-index: 999;
+  background-color: #333333;
+  width: 100%;
+}
+
+@media (min-width: 480px) {
+  .navbar-background {
+    overflow: visible;
+  }
+}
+
+#navbar {
+  display: none;
+  left: 0;
+  top: 22px;
+  height: 100vh;
+  position: relative;
+  margin: auto;
+  z-index: 9999;
+  max-width: 900px;
+  font-color: #333333;
+}
+
+@media (min-width: 480px) {
+  #navbar {
+    display: block;
+    left: 1em;
+    top: 26px;
+    height: 100%;
+  }
+}
+
+.hamburger {
+  z-index: 999;
+  content: "";
+  position: fixed;
+  top: 24px;
+  right: 14px;
+  width: 24px;
+  height: 21px;
+  border-top: 12px double #FFFF;
+  border-bottom: 4px solid #FFFF;
+}
+
+@media (min-width: 480px) {
+  .hamburger {
+    display: none;
+  }
+}
+
+/**
+ * ReSass.
+ *
+ * MIXIN: Responsive Media Queries.
+ *
+ * Creates responsive media queries for seven different screen sizes.
+ * These are based on min-width which means if x is the size then your
+ * CSS will affect any device with screen width x and above.
+ *
+ * USAGE:
+ *	@include r(240)  { }
+ *	@include r(320)  { }
+ *	@include r(480)  { }
+ *	@include r(768)  { }
+ *	@include r(1024) { }
+ *	@include r(1140) { }
+ *	@include r(1280) { }
+ *  @include r(1500) { }
+ *
+ * CSS content goes inside {} brackets. These mixins should be used inside
+ * a class definition. For example:
+ *
+ * The following CSS will hide the .header on screen width 320px and above.
+ * .header {
+ * 	  @include r(320)  { display: none; }
+ * }
+ *
+ * @author  Ahmad Awais (https://github.com/ahmadawais)
+ * @link    https://github.com/ahmadawais/ReSass.git
+ * @version 1.0.0
+ */
+#footer-lund {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 18rem;
+  background-color: #333333;
+}
+
+div#sponsors {
+  max-width: 900px;
+  margin: auto;
+  padding: 2em;
+  position: relative;
+}
+
+div#sponsors img.sponsor {
+  float: top;
+  margin-left: 7%;
+  margin-bottom: 1em;
+  max-width: 10%;
+  min-width: 7%;
+}
+
+div#sponsors img#bakertilly {
+  padding-top: 10%;
+  max-width: 15%;
+  float: top;
+}
+
+div#sponsors div#social {
+  margin-top: 4em;
+  margin-left: auto;
+  margin-right: auto;
+  float: right;
+  width: auto;
+  height: auto;
+  margin-top: 0px;
+}
+
+div#sponsors div#social ul {
+  list-style: none;
+  color: #FFFF;
+}
+
+div#sponsors div#social ul a {
+  color: #FFFF;
+  padding: 0;
+}
+
+div#sponsors div#social img {
+  width: 1em;
+  height: 1em;
+  margin-right: 1em;
+  margin-bottom: 0;
+}
+
+/**
+ * ReSass.
+ *
+ * MIXIN: Responsive Media Queries.
+ *
+ * Creates responsive media queries for seven different screen sizes.
+ * These are based on min-width which means if x is the size then your
+ * CSS will affect any device with screen width x and above.
+ *
+ * USAGE:
+ *	@include r(240)  { }
+ *	@include r(320)  { }
+ *	@include r(480)  { }
+ *	@include r(768)  { }
+ *	@include r(1024) { }
+ *	@include r(1140) { }
+ *	@include r(1280) { }
+ *  @include r(1500) { }
+ *
+ * CSS content goes inside {} brackets. These mixins should be used inside
+ * a class definition. For example:
+ *
+ * The following CSS will hide the .header on screen width 320px and above.
+ * .header {
+ * 	  @include r(320)  { display: none; }
+ * }
+ *
+ * @author  Ahmad Awais (https://github.com/ahmadawais)
+ * @link    https://github.com/ahmadawais/ReSass.git
+ * @version 1.0.0
+ */
+.avatar {
+  margin-right: 32%;
+  margin-left: 32%;
+  width: 38%;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  background-color: #333333;
+  top: 0;
+  bottom: 0;
+  left: 0px;
+  margin-left: -3px;
+}
+
+/* Container around content */
+.container {
+  position: relative;
+  background-color: inherit;
+  width: 100%;
+  padding-left: 40px;
+  padding-right: 25px;
+}
+
+/* The circles on the timeline */
+.container::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -17px;
+  background-color: #f0efef;
+  border: 4px solid #333333;
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* Add arrows to the right container (pointing left) */
+.right::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  left: 30px;
+  border: medium solid white;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent white transparent transparent;
+}
+
+/* Fix the circle for containers on the right side */
+.right::after {
+  left: -16px;
+}
+
+/* The actual content */
+.content {
+  padding: 20px 30px;
+  background-color: #f0efef;
+  position: relative;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+
+.container::before {
+  left: 30px;
+  border: medium solid white;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent #f0efef transparent transparent;
+}
+
+.right {
+  left: 0%;
+}
+
+img#group-photo {
+  background: url("https://2019.igem.org/wiki/images/d/d5/T--Lund--group-photo.JPG");
+  height: 600px;
+  width: 100%;
+}
+
+img#group-photo:hover {
+  background: url("https://2019.igem.org/wiki/images/9/98/T--Lund--group-photo-alt.JPG");
+}
+
+#page-container {
+  padding-top: 20px;
+  position: relative;
+  min-height: 100vh;
+}
+
+#content-wrap {
+  max-width: 900px;
+  padding-bottom: 18rem;
+  /* Footer height */
+  margin: auto;
+}
+
+* {
+  margin: 0;
+  padding: 0px;
+}
+
+body {
+  background: #FFFF;
+  font-family: "Open Sans";
+}
+
+a {
+  text-decoration: none;
+  color: #e55274;
+}
+
+a:hover {
+  color: #727272;
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+  color: #e55274;
+}
+
+a:visited:hover {
+  color: #727272;
+  text-decoration: none;
+}
+
+.row:after {
+  display: block;
+  clear: both;
+  content: '';
+}
+
+.row + .row {
+  margin-top: 3%;
+}
+
+[class^="col-"] {
+  float: left;
+  margin-right: 3%;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+[class^="col-"]:last-child {
+  margin-right: 0%;
+}
+
+.col-1 {
+  width: 5.58333%;
+}
+
+.col-2 {
+  width: 14.16667%;
+}
+
+.col-3 {
+  width: 22.75%;
+}
+
+.col-4 {
+  width: 31.33333%;
+}
+
+.col-5 {
+  width: 39.91667%;
+}
+
+.col-6 {
+  width: 48.5%;
+}
+
+.col-7 {
+  width: 57.08333%;
+}
+
+.col-8 {
+  width: 65.66667%;
+}
+
+.col-9 {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .col-9 {
+    width: 74.25%;
+  }
+}
+
+.col-10 {
+  width: 82.83333%;
+}
+
+.col-11 {
+  width: 91.41667%;
+}
+
+.col-12 {
+  width: 100%;
+}
+/*# sourceMappingURL=main.css.map */
